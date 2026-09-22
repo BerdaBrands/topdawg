@@ -1,0 +1,4 @@
+# Keep GitHub's language stats showing this as an HTML project,
+# instead of tipping to CSS just because style.css has more bytes.
+*.css linguist-detectable=false
+*.js linguist-detectable=false
