@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+<meta name="theme-color" content="#121418">
+<title>Top Dawg Detailing | Premium Auto Detailing</title>
+<meta name="description" content="Top Dawg Detailing: locally owned and operated car detailing in Skiatook, OK. Shop drop-off or we come to you. Text 918-697-1469 to book.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ========== STICKY NAV ========== -->
+<header class="navbar" id="navbar">
+  <div class="navbar__inner">
+    <a href="#hero" class="navbar__logo">
+      <img src="assets/images/logo-on-dark.png" alt="Top Dawg Detailing" class="navbar__logo-img">
+    </a>
+
+    <nav class="navbar__links" id="navLinks">
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+
+    <a href="#contact" class="btn btn--primary navbar__cta">Book Now</a>
+
+    <button class="navbar__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ========== HERO ========== -->
+<section class="hero" id="hero">
+  <div class="hero__bg"></div>
+  <div class="hero__overlay"></div>
+  <div class="hero__content">
+    <div class="hero__logo">
+      <img src="assets/images/logo-on-dark.png" alt="Top Dawg Detailing" class="hero__logo-img">
+    </div>
+    <p class="hero__tagline">Premium Detailing. Drop-Off or We Come to You.</p>
+    <a href="#contact" class="btn btn--primary btn--lg hero__cta" id="heroBookNow">Book Now</a>
+    <p class="hero__badge">Locally Owned &amp; Operated &bull; Skiatook, OK</p>
+  </div>
+  <div class="hero__scroll-indicator" aria-hidden="true">
+    <span></span>
+  </div>
+</section>
+
+<!-- ========== SERVICES + PRICING ========== -->
+<section class="services" id="services">
+  <div class="container">
+    <h2 class="section-title">Services &amp; Pricing</h2>
+    <p class="section-subtitle">Choose how you want to roll.</p>
+
+    <div class="toggle" role="group" aria-label="Service location toggle">
+      <button type="button" class="toggle__btn is-active" data-mode="dropoff" id="toggleDropoff" aria-pressed="true" aria-controls="panelDropoff">Shop Drop-Off</button>
+      <button type="button" class="toggle__btn" data-mode="mobile" id="toggleMobile" aria-pressed="false" aria-controls="panelMobile">Mobile Detailing</button>
+    </div>
+
+    <!-- SHOP PRICING -->
+    <div class="price-panel" id="panelDropoff">
+      <div class="price-card">
+        <div class="price-card__head">
+          <h3 class="price-card__title">Shop Price <span>&bull;</span> Garage Drop-Off</h3>
+          <span class="price-card__pill">DI Included &bull; Best Value</span>
+        </div>
+        <p class="price-card__sub">Garage in Skiatook &bull; DI Spotless Rinse Included &bull; Best Value</p>
+        <table class="price-table">
+          <thead>
+            <tr>
+              <th class="price-table__service">Service</th>
+              <th>Car / Sedan</th>
+              <th>Mid SUV</th>
+              <th>Large / Truck</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row" class="price-table__service"><span class="price-table__name">Exterior Only</span><span class="price-table__desc">Hand wash + DI spotless rinse</span></th>
+              <td>$75</td><td>$95</td><td>$115</td>
+            </tr>
+            <tr>
+              <th scope="row" class="price-table__service"><span class="price-table__name">Interior Deep</span><span class="price-table__desc">Full interior deep clean</span></th>
+              <td>$115</td><td>$135</td><td>$165</td>
+            </tr>
+            <tr class="price-table__row--bundle">
+              <th scope="row" class="price-table__service"><span class="price-table__badge">Best Value</span><span class="price-table__name">Bundle Both</span><span class="price-table__desc">Exterior + Interior</span></th>
+              <td>$165</td><td>$205</td><td>$245</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- MOBILE PRICING -->
+    <div class="price-panel" id="panelMobile" hidden>
+      <div class="price-card price-card--mobile">
+        <div class="price-card__head">
+          <h3 class="price-card__title">Mobile Price <span>&bull;</span> We Come To You</h3>
+          <span class="price-card__pill">We Come To You &bull; No DI Yet</span>
+        </div>
+        <p class="price-card__sub">20 Mile Radius Included &bull; Standard rinse (DI rinse is shop-only for now)</p>
+        <table class="price-table">
+          <thead>
+            <tr>
+              <th class="price-table__service">Service</th>
+              <th>Car / Sedan</th>
+              <th>Mid SUV</th>
+              <th>Large / Truck</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row" class="price-table__service"><span class="price-table__name">Exterior Only</span><span class="price-table__desc">Hand wash + standard rinse</span></th>
+              <td>$95</td><td>$115</td><td>$135</td>
+            </tr>
+            <tr>
+              <th scope="row" class="price-table__service"><span class="price-table__name">Interior Deep</span><span class="price-table__desc">Full interior deep clean</span></th>
+              <td>$135</td><td>$155</td><td>$185</td>
+            </tr>
+            <tr class="price-table__row--bundle">
+              <th scope="row" class="price-table__service"><span class="price-table__badge">Best Value</span><span class="price-table__name">Bundle Both</span><span class="price-table__desc">Exterior + Interior</span></th>
+              <td>$185</td><td>$225</td><td>$265</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="travel-fee">
+        <h4 class="travel-fee__title">Travel Fee <span>&bull;</span> 20 Miles Included in Mobile Price</h4>
+        <ul class="travel-fee__list">
+          <li><span>0-20 miles from Skiatook shop</span><strong class="travel-fee__included">Included</strong></li>
+          <li><span>21-30 miles: N. Tulsa, Claremore edge</span><strong>+$25</strong></li>
+          <li><span>31-40 miles: Midtown Tulsa, BA edge</span><strong>+$45</strong></li>
+          <li><span>41-50 miles</span><strong>+$65</strong></li>
+          <li><span>50+ miles / No water or power</span><strong>Custom / +$15</strong></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="why-us">
+      <h3 class="why-us__title">Why Choose Us</h3>
+      <div class="why-us__grid">
+        <div class="why-us__item">
+          <div class="why-us__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/></svg>
+          </div>
+          <h4>Deionized Spotless Rinse</h4>
+          <p>Included with every shop wash. Pure water means no mineral spots and a streak-free finish.</p>
+        </div>
+        <div class="why-us__item">
+          <div class="why-us__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <h4>Drop-Off Service</h4>
+          <p>Leave it with us and go about your day. We'll handle the rest.</p>
+        </div>
+        <div class="why-us__item">
+          <div class="why-us__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <h4>Professional Products</h4>
+          <p>Premium-grade chemicals and tools built for a lasting shine.</p>
+        </div>
+        <div class="why-us__item">
+          <div class="why-us__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="8 12 11 15 16 9"/></svg>
+          </div>
+          <h4>Hand Washing Only</h4>
+          <p>No harsh brushes. Every vehicle is washed by hand, with care.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PROJECTS ========== -->
+<section class="projects" id="projects">
+  <div class="container">
+    <h2 class="section-title">Recent Projects</h2>
+    <p class="section-subtitle">Tap any project to see the full set of photos.</p>
+
+    <!--
+      ADD A NEW PROJECT: copy one <article class="project-card ..."> block below.
+      1. Drop the photos in assets/images/projects/<name>/ (01.jpg = full size, 01-thumb.jpg = small).
+      2. Update the title, description, services and the photo links (first photo is the cover).
+      3. Blur license plates before publishing customer photos.
+    -->
+    <div class="projects__grid">
+      <article class="project-card project-card--pathfinder project-card--feature" data-project="pathfinder">
+        <button type="button" class="project-card__open" aria-haspopup="dialog" aria-label="Open project: Nissan Pathfinder Rock Creek">
+          <img class="project-card__img" src="assets/images/projects/pathfinder/01.jpg" alt="" loading="lazy">
+          <span class="project-card__overlay">
+            <span class="project-card__kicker">Exterior + Interior</span>
+            <span class="project-card__title">Nissan Pathfinder Rock Creek</span>
+            <span class="project-card__cta"><span class="project-card__count">6 photos</span><span class="project-card__more">View project</span></span>
+          </span>
+        </button>
+        <div class="project-data" hidden>
+          <p class="project-data__description">A red Rock Creek Pathfinder that got the full treatment. Road film was foamed off, every panel was hand washed and rinsed, then the cabin was taken from dusty to clean.</p>
+          <ul class="project-data__services">
+            <li>Foam Pre-Soak</li>
+            <li>Hand Wash</li>
+            <li>Interior Deep Clean</li>
+          </ul>
+          <ul class="project-data__photos">
+            <li><a href="assets/images/projects/pathfinder/01.jpg" data-thumb="assets/images/projects/pathfinder/01-thumb.jpg">Finished: hand washed and rinsed</a></li>
+            <li><a href="assets/images/projects/pathfinder/02.jpg" data-thumb="assets/images/projects/pathfinder/02-thumb.jpg">Foam pre-soak to lift road film safely</a></li>
+            <li><a href="assets/images/projects/pathfinder/03.jpg" data-thumb="assets/images/projects/pathfinder/03-thumb.jpg">Rear hatch mid-wash, before the rinse</a></li>
+            <li><a href="assets/images/projects/pathfinder/04.jpg" data-thumb="assets/images/projects/pathfinder/04-thumb.jpg">Tailgate and badging after the wash</a></li>
+            <li><a href="assets/images/projects/pathfinder/05.jpg" data-thumb="assets/images/projects/pathfinder/05-thumb.jpg">Front cabin before the interior deep clean</a></li>
+            <li><a href="assets/images/projects/pathfinder/06.jpg" data-thumb="assets/images/projects/pathfinder/06-thumb.jpg">Rock Creek seats cleaned by hand</a></li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="project-card project-card--carnival" data-project="carnival">
+        <button type="button" class="project-card__open" aria-haspopup="dialog" aria-label="Open project: Kia Carnival">
+          <img class="project-card__img" src="assets/images/projects/carnival/01-thumb.jpg" alt="" loading="lazy">
+          <span class="project-card__overlay">
+            <span class="project-card__kicker">Exterior + Wheels</span>
+            <span class="project-card__title">Kia Carnival</span>
+            <span class="project-card__cta"><span class="project-card__count">5 photos</span><span class="project-card__more">View project</span></span>
+          </span>
+        </button>
+        <div class="project-data" hidden>
+          <p class="project-data__description">Wheel and tire detail on a Kia Carnival. Dull, road-worn wheels and tires were cleaned and dressed to a deep black, and the mirrors and paint were hand washed and rinsed.</p>
+          <ul class="project-data__services">
+            <li>Hand Wash</li>
+            <li>Wheels &amp; Tires</li>
+          </ul>
+          <ul class="project-data__photos">
+            <li><a href="assets/images/projects/carnival/01.jpg" data-thumb="assets/images/projects/carnival/01-thumb.jpg">Finished: washed and rinsed</a></li>
+            <li><a href="assets/images/projects/carnival/02.jpg" data-thumb="assets/images/projects/carnival/02-thumb.jpg">Wheel and tire before</a></li>
+            <li><a href="assets/images/projects/carnival/03.jpg" data-thumb="assets/images/projects/carnival/03-thumb.jpg">Wheel and tire after: clean and dressed</a></li>
+            <li><a href="assets/images/projects/carnival/04.jpg" data-thumb="assets/images/projects/carnival/04-thumb.jpg">Mirror cap before: road film and water spots</a></li>
+            <li><a href="assets/images/projects/carnival/05.jpg" data-thumb="assets/images/projects/carnival/05-thumb.jpg">Mirror cap after: clean and glossy</a></li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="project-card project-card--telluride" data-project="telluride">
+        <button type="button" class="project-card__open" aria-haspopup="dialog" aria-label="Open project: Kia Telluride">
+          <img class="project-card__img" src="assets/images/projects/telluride/01-thumb.jpg" alt="" loading="lazy">
+          <span class="project-card__overlay">
+            <span class="project-card__kicker">Exterior</span>
+            <span class="project-card__title">Kia Telluride</span>
+            <span class="project-card__cta"><span class="project-card__count">3 photos</span><span class="project-card__more">View project</span></span>
+          </span>
+        </button>
+        <div class="project-data" hidden>
+          <p class="project-data__description">Front-end bug and road-film cleanup on a Kia Telluride. A foam soak loosened the buildup before a careful hand wash.</p>
+          <ul class="project-data__services">
+            <li>Foam Pre-Soak</li>
+            <li>Hand Wash</li>
+          </ul>
+          <ul class="project-data__photos">
+            <li><a href="assets/images/projects/telluride/01.jpg" data-thumb="assets/images/projects/telluride/01-thumb.jpg">Foam pre-soak on the front end</a></li>
+            <li><a href="assets/images/projects/telluride/02.jpg" data-thumb="assets/images/projects/telluride/02-thumb.jpg">Front bumper with bug and road-film buildup</a></li>
+            <li><a href="assets/images/projects/telluride/03.jpg" data-thumb="assets/images/projects/telluride/03-thumb.jpg">Close-up of bug splatter on the paint</a></li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="project-card project-card--sedan-interior" data-project="sedan-interior">
+        <button type="button" class="project-card__open" aria-haspopup="dialog" aria-label="Open project: Sedan Interior Deep Clean">
+          <img class="project-card__img" src="assets/images/projects/sedan-interior/01-thumb.jpg" alt="" loading="lazy">
+          <span class="project-card__overlay">
+            <span class="project-card__kicker">Interior</span>
+            <span class="project-card__title">Sedan Interior Deep Clean</span>
+            <span class="project-card__cta"><span class="project-card__count">2 photos</span><span class="project-card__more">View project</span></span>
+          </span>
+        </button>
+        <div class="project-data" hidden>
+          <p class="project-data__description">Rear leather seats with crumbs and grime worked into the seams. Vacuumed and cleaned by hand until they looked fresh again.</p>
+          <ul class="project-data__services">
+            <li>Vacuum</li>
+            <li>Leather Clean</li>
+            <li>Interior Deep Clean</li>
+          </ul>
+          <ul class="project-data__photos">
+            <li><a href="assets/images/projects/sedan-interior/01.jpg" data-thumb="assets/images/projects/sedan-interior/01-thumb.jpg">After: rear leather seats cleaned by hand</a></li>
+            <li><a href="assets/images/projects/sedan-interior/02.jpg" data-thumb="assets/images/projects/sedan-interior/02-thumb.jpg">Before: crumbs and grime in the seams</a></li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="project-card project-card--tahoe" data-project="tahoe">
+        <button type="button" class="project-card__open" aria-haspopup="dialog" aria-label="Open project: Chevrolet Tahoe">
+          <img class="project-card__img" src="assets/images/projects/tahoe/01-thumb.jpg" alt="" loading="lazy">
+          <span class="project-card__overlay">
+            <span class="project-card__kicker">Exterior</span>
+            <span class="project-card__title">Chevrolet Tahoe</span>
+            <span class="project-card__cta"><span class="project-card__count">3 photos</span><span class="project-card__more">View project</span></span>
+          </span>
+        </button>
+        <div class="project-data" hidden>
+          <p class="project-data__description">A dark gray Tahoe on machined wheels. Foam loosened the grime and the hand wash cleaned every panel.</p>
+          <ul class="project-data__services">
+            <li>Foam Pre-Soak</li>
+            <li>Hand Wash</li>
+          </ul>
+          <ul class="project-data__photos">
+            <li><a href="assets/images/projects/tahoe/01.jpg" data-thumb="assets/images/projects/tahoe/01-thumb.jpg">Finished: clean paint and wheels</a></li>
+            <li><a href="assets/images/projects/tahoe/02.jpg" data-thumb="assets/images/projects/tahoe/02-thumb.jpg">Foam pre-soak on a dark gray Tahoe</a></li>
+            <li><a href="assets/images/projects/tahoe/03.jpg" data-thumb="assets/images/projects/tahoe/03-thumb.jpg">Rear glass mid-wash, before the rinse</a></li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="project-card project-card--suburban project-card--wide" data-project="suburban">
+        <button type="button" class="project-card__open" aria-haspopup="dialog" aria-label="Open project: Chevrolet Suburban">
+          <img class="project-card__img" src="assets/images/projects/suburban/01.jpg" alt="" loading="lazy">
+          <span class="project-card__overlay">
+            <span class="project-card__kicker">Exterior</span>
+            <span class="project-card__title">Chevrolet Suburban</span>
+            <span class="project-card__cta"><span class="project-card__count">5 photos</span><span class="project-card__more">View project</span></span>
+          </span>
+        </button>
+        <div class="project-data" hidden>
+          <p class="project-data__description">Black paint shows everything, so this Suburban got a thick foam pre-soak and a careful hand wash to leave the paint and glass clean and streak free.</p>
+          <ul class="project-data__services">
+            <li>Foam Pre-Soak</li>
+            <li>Hand Wash</li>
+          </ul>
+          <ul class="project-data__photos">
+            <li><a href="assets/images/projects/suburban/01.jpg" data-thumb="assets/images/projects/suburban/01-thumb.jpg">Finished: clean black paint</a></li>
+            <li><a href="assets/images/projects/suburban/02.jpg" data-thumb="assets/images/projects/suburban/02-thumb.jpg">Thick foam pre-soak before the hand wash</a></li>
+            <li><a href="assets/images/projects/suburban/03.jpg" data-thumb="assets/images/projects/suburban/03-thumb.jpg">Rinse pass on the rear glass</a></li>
+            <li><a href="assets/images/projects/suburban/04.jpg" data-thumb="assets/images/projects/suburban/04-thumb.jpg">Rear glass and chrome after the wash</a></li>
+            <li><a href="assets/images/projects/suburban/05.jpg" data-thumb="assets/images/projects/suburban/05-thumb.jpg">Side profile after the wash</a></li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="project-card project-card--tahoe-lt project-card--wide" data-project="tahoe-lt">
+        <button type="button" class="project-card__open" aria-haspopup="dialog" aria-label="Open project: Chevrolet Tahoe LT">
+          <img class="project-card__img" src="assets/images/projects/tahoe-lt/01.jpg" alt="" loading="lazy">
+          <span class="project-card__overlay">
+            <span class="project-card__kicker">Exterior</span>
+            <span class="project-card__title">Chevrolet Tahoe LT</span>
+            <span class="project-card__cta"><span class="project-card__count">2 photos</span><span class="project-card__more">View project</span></span>
+          </span>
+        </button>
+        <div class="project-data" hidden>
+          <p class="project-data__description">A black Tahoe LT with chrome mesh wheels. Foamed and hand washed so the paint and wheels come out clean and glossy.</p>
+          <ul class="project-data__services">
+            <li>Foam Pre-Soak</li>
+            <li>Hand Wash</li>
+          </ul>
+          <ul class="project-data__photos">
+            <li><a href="assets/images/projects/tahoe-lt/01.jpg" data-thumb="assets/images/projects/tahoe-lt/01-thumb.jpg">Finished: clean black paint and chrome wheels</a></li>
+            <li><a href="assets/images/projects/tahoe-lt/02.jpg" data-thumb="assets/images/projects/tahoe-lt/02-thumb.jpg">Foam bath before the hand wash</a></li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="project-card project-card--shop-setup project-card--wide" data-project="shop-setup">
+        <button type="button" class="project-card__open" aria-haspopup="dialog" aria-label="Open project: The Garage Setup">
+          <img class="project-card__img" src="assets/images/projects/shop-setup/01.jpg" alt="" loading="lazy">
+          <span class="project-card__overlay">
+            <span class="project-card__kicker">Behind the Scenes</span>
+            <span class="project-card__title">The Garage Setup</span>
+            <span class="project-card__cta"><span class="project-card__count">1 photo</span><span class="project-card__more">View project</span></span>
+          </span>
+        </button>
+        <div class="project-data" hidden>
+          <p class="project-data__description">Where the shop work happens. The garage is set up with dual hose reels and a filtered water system so every wash starts with clean water.</p>
+          <ul class="project-data__services">
+            <li>Dual Hose Reels</li>
+            <li>Filtered Water</li>
+          </ul>
+          <ul class="project-data__photos">
+            <li><a href="assets/images/projects/shop-setup/01.jpg" data-thumb="assets/images/projects/shop-setup/01-thumb.jpg">Hose reels and filtered water system in the garage</a></li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="project-card project-card--junior-detailer project-card--wide" data-project="junior-detailer">
+        <button type="button" class="project-card__open" aria-haspopup="dialog" aria-label="Open project: Junior Detailer">
+          <img class="project-card__img" src="assets/images/projects/junior-detailer/01.jpg" alt="" loading="lazy">
+          <span class="project-card__overlay">
+            <span class="project-card__kicker">Family Business</span>
+            <span class="project-card__title">Junior Detailer</span>
+            <span class="project-card__cta"><span class="project-card__count">3 photos</span><span class="project-card__more">View project</span></span>
+          </span>
+        </button>
+        <div class="project-data" hidden>
+          <p class="project-data__description">Detailing is a family thing at Top Dawg. Some days our son pitches in, and he takes his own ride very seriously.</p>
+          <ul class="project-data__services">
+            <li>Hand Wash</li>
+            <li>Microfiber Towel</li>
+            <li>Family Owned</li>
+          </ul>
+          <ul class="project-data__photos">
+            <li><a href="assets/images/projects/junior-detailer/01.jpg" data-thumb="assets/images/projects/junior-detailer/01-thumb.jpg">Our youngest detailer, ready for work</a></li>
+            <li><a href="assets/images/projects/junior-detailer/02.jpg" data-thumb="assets/images/projects/junior-detailer/02-thumb.jpg">Working the hood with a microfiber towel</a></li>
+            <li><a href="assets/images/projects/junior-detailer/03.jpg" data-thumb="assets/images/projects/junior-detailer/03-thumb.jpg">Wiping down the fender</a></li>
+          </ul>
+        </div>
+      </article>
+    </div>
+
+    <div class="before-after">
+      <div class="before-after__text">
+        <span class="before-after__kicker">Before &amp; After</span>
+        <h3 class="before-after__title">Wheel &amp; Tire Detail</h3>
+        <p>Drag the slider to compare. A dull, road-worn wheel and tire on the left, cleaned and dressed to a deep black on the right. Same wheel, same angle.</p>
+        <a href="#contact" class="btn btn--primary">Book Your Detail</a>
+      </div>
+
+      <div class="ba-slider" id="baSlider">
+        <img class="ba-slider__img" src="assets/images/projects/carnival/03.jpg" alt="Kia wheel and tire after detailing" loading="lazy">
+        <div class="ba-slider__before">
+          <img class="ba-slider__img" src="assets/images/projects/carnival/02.jpg" alt="Kia wheel and tire before detailing" loading="lazy">
+        </div>
+        <span class="ba-slider__label ba-slider__label--before">Before</span>
+        <span class="ba-slider__label ba-slider__label--after">After</span>
+        <div class="ba-slider__divider"></div>
+        <div class="ba-slider__handle"><span>&lsaquo; &rsaquo;</span></div>
+        <input type="range" min="0" max="100" value="50" class="ba-slider__input" id="baInput" aria-label="Before and after comparison slider">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== ABOUT ========== -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about__grid">
+      <div class="about__text">
+        <span class="about__kicker">Locally Owned &amp; Operated</span>
+        <h2 class="about__title">About Top Dawg Detailing</h2>
+        <p>Top Dawg Detailing is locally owned and operated in Skiatook, Oklahoma. We are a small, hands-on operation, so every vehicle gets our full attention from the first rinse to the final wipe-down.</p>
+        <p>Everything is washed by hand with professional products. Bring your vehicle to our garage in Skiatook and it finishes with a deionized spotless rinse, or book mobile detailing and we come to you.</p>
+        <p>It is a family operation. Some days our son pitches in, and he takes the job very seriously.</p>
+        <ul class="about__facts">
+          <li>Locally owned and operated</li>
+          <li>Garage shop in Skiatook, OK</li>
+          <li>Mobile service with 20 miles included</li>
+          <li>Hand wash only, professional products</li>
+        </ul>
+      </div>
+
+      <div class="about__card">
+        <h3 class="about__card-title">Where We Work</h3>
+        <ul class="area-chips">
+          <li>Skiatook</li>
+          <li>Skiatook Lake</li>
+          <li>Sperry</li>
+          <li>Tulsa</li>
+          <li>Collinsville</li>
+          <li>Owasso</li>
+        </ul>
+        <p class="about__card-note">Mobile visits include a 20 mile radius from the Skiatook shop. Farther out? Text us and we will work it out.</p>
+        <a href="#contact" class="btn btn--primary">Book Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CONTACT / BOOK NOW ========== -->
+<section class="contact" id="contact">
+  <div class="container">
+    <h2 class="section-title">Book Now</h2>
+    <p class="section-subtitle">Text us and we'll get you on the schedule.</p>
+
+    <div class="contact__quick-actions">
+      <a href="sms:9186971469" class="btn btn--primary btn--lg contact__quick-btn">
+        <span class="contact__quick-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+        </span> Text Us to Book
+      </a>
+      <p class="contact__quick-note">Fastest way to book: text us your vehicle and what you need.</p>
+    </div>
+
+    <div class="contact__grid">
+      <div class="contact__location">
+        <span class="contact__location-kicker">Shop Location</span>
+        <h3 class="contact__location-title">Skiatook, Oklahoma</h3>
+        <p>Garage drop-off shop in Skiatook. We will text you the exact address when you book.</p>
+        <!-- ADD SHOP STREET ADDRESS HERE if you want it shown publicly -->
+        <h4 class="contact__location-label">Service Area</h4>
+        <ul class="area-chips">
+          <li>Skiatook</li>
+          <li>Skiatook Lake</li>
+          <li>Sperry</li>
+          <li>Tulsa</li>
+          <li>Collinsville</li>
+          <li>Owasso</li>
+        </ul>
+        <p class="contact__location-note">Mobile detailing includes a 20 mile radius from the shop.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__logo">TOP <span>DAWG</span> DETAILING</div>
+    <p class="footer__tagline">Locally Owned &amp; Operated &bull; Skiatook, OK</p>
+    <p class="footer__phone"><a href="sms:9186971469">Text 918-697-1469</a></p>
+    <p class="footer__copy">&copy; <span id="year"></span> Top Dawg Detailing. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- ========== PROJECT VIEWER ========== -->
+<dialog class="project-modal" id="projectModal" aria-labelledby="projectTitle">
+  <div class="project-modal__layout">
+    <button type="button" class="project-modal__close" id="projectClose" aria-label="Close project">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+
+    <div class="project-viewer">
+      <div class="project-viewer__stage" id="projectStage">
+        <img class="project-viewer__img" id="projectImage" alt="">
+        <button type="button" class="project-viewer__nav project-viewer__nav--prev" id="projectPrev" aria-label="Previous photo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <button type="button" class="project-viewer__nav project-viewer__nav--next" id="projectNext" aria-label="Next photo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+        <span class="project-viewer__counter" id="projectCounter"></span>
+      </div>
+      <p class="project-viewer__caption" id="projectCaption" aria-live="polite"></p>
+      <div class="project-viewer__thumbs" id="projectThumbs"></div>
+    </div>
+
+    <div class="project-info">
+      <span class="project-info__kicker" id="projectKicker"></span>
+      <h3 class="project-info__title" id="projectTitle"></h3>
+      <p class="project-info__description" id="projectDescription"></p>
+      <h4 class="project-info__label">Details</h4>
+      <ul class="project-info__services" id="projectServices"></ul>
+      <div class="project-info__actions">
+        <a href="#contact" class="btn btn--primary" id="projectBook">Book This Service</a>
+        <a href="sms:9186971469" class="btn btn--outline">Text 918-697-1469</a>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<a href="sms:9186971469" class="mobile-text-fab" aria-label="Text Top Dawg Detailing">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+</a>
+
+<script src="js/main.js"></script>
+</body>
+</html>
