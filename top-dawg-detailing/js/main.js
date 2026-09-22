@@ -43,7 +43,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const toggleButtons = document.querySelectorAll('.toggle__btn');
   const panels = {
     dropoff: document.getElementById('panelDropoff'),
-    mobile: document.getElementById('panelMobile')
+    mobile: document.getElementById('panelMobile'),
+    addons: document.getElementById('panelAddons')
   };
 
   function setMode(mode) {
@@ -91,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const descEl = document.getElementById('projectDescription');
   const servicesEl = document.getElementById('projectServices');
   const cards = document.querySelectorAll('.project-card[data-project]');
-  const projectsSection = document.getElementById('projects');
+  const gallerySection = document.getElementById('gallery');
 
   let photos = [];
   let index = 0;
@@ -258,16 +259,16 @@ document.addEventListener('DOMContentLoaded', () => {
   if (hashMatch) {
     const card = document.querySelector('.project-card[data-project="' + hashMatch[1] + '"]');
     if (card) {
-      if (projectsSection) projectsSection.scrollIntoView({ behavior: 'auto', block: 'start' });
+      if (gallerySection) gallerySection.scrollIntoView({ behavior: 'auto', block: 'start' });
       openProject(card, { silent: true });
     }
   }
 
   /* ---------- Scroll reveal animations ---------- */
   const revealTargets = document.querySelectorAll(
-    '.services .section-title, .services .toggle, .price-card, .travel-fee, .why-us__title, .why-us__item, ' +
+    '.services .section-title, .services .toggle, .price-card, .travel-fee, .why-us__title, .why-us__item, .addons__note, ' +
     '.projects .section-title, .project-card, .before-after, ' +
-    '.about__text, .about__card, ' +
+    '.about__text, .about__card, .reviews__card, ' +
     '.contact .section-title, .contact__quick-actions, .contact__location'
   );
 

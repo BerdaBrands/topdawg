@@ -202,7 +202,7 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
 
 .navbar__links {
   display: flex;
-  gap: 32px;
+  gap: 22px;
   margin-left: auto;
 }
 
@@ -231,7 +231,24 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
 .nav-link:hover { color: var(--ink); }
 .nav-link:hover::after { width: 100%; }
 
-.navbar__cta { padding: 10px 24px; font-size: 0.85rem; }
+.navbar__cta { padding: 10px 24px; font-size: 0.85rem; flex-shrink: 0; }
+
+.navbar__social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  color: var(--ink-soft);
+  flex-shrink: 0;
+  transition: color var(--transition), background var(--transition), transform var(--transition);
+}
+
+.navbar__social:hover { color: var(--white); background: var(--red); transform: translateY(-2px); }
+.navbar__social svg { width: 17px; height: 17px; }
 
 .navbar__toggle {
   display: none;
@@ -240,6 +257,7 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
   gap: 5px;
   width: 32px;
   height: 32px;
+  flex-shrink: 0;
 }
 
 .navbar__toggle span {
@@ -611,6 +629,7 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
 
 /* ---------- Why Choose Us ---------- */
 .why-us { margin-top: 90px; }
+.services__addons, .about__reviews { margin-top: 70px; }
 
 .why-us__title {
   font-family: var(--font-display);
@@ -667,6 +686,124 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
   color: var(--ink-soft);
   line-height: 1.55;
 }
+
+/* ==========================================================================
+   ADD-ON SERVICES
+   ========================================================================== */
+
+.addons {
+  padding: 100px 0;
+  background:
+    radial-gradient(ellipse 60% 38% at 100% 10%, rgba(204, 0, 0, 0.18), transparent 70%),
+    var(--bg-soft);
+}
+
+.addons__card { max-width: 800px; margin: 0 auto; }
+.addons__card .price-table td { color: var(--white); font-size: 1.1rem; }
+
+.addons__note {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  max-width: 800px;
+  margin: 22px auto 0;
+  padding: 18px 22px;
+  border-radius: 10px;
+  border: 1px solid var(--line-strong);
+  background: var(--card);
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.addons__note svg { flex-shrink: 0; width: 22px; height: 22px; color: var(--red-text); margin-top: 2px; }
+.addons__note strong { color: var(--ink); }
+
+/* ==========================================================================
+   REVIEWS
+   ========================================================================== */
+
+.reviews {
+  padding: 100px 0;
+  background: var(--bg);
+}
+
+.reviews__card {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 44px 32px;
+  text-align: center;
+  border-radius: 14px;
+  border: 1px solid var(--line-strong);
+  background: var(--card);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+}
+
+.review-item {
+  display: flex;
+  gap: 16px;
+  text-align: left;
+  padding: 22px;
+  margin-bottom: 28px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+}
+
+.review-item__avatar {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--red);
+  color: var(--white);
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+.review-item__body { min-width: 0; }
+
+.review-item__header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 10px;
+  margin-bottom: 6px;
+}
+
+.review-item__name { font-weight: 800; color: var(--ink); }
+
+.review-item__meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--ink-faint);
+  font-size: 0.82rem;
+}
+
+.review-item__meta svg { width: 13px; height: 13px; }
+
+.review-item__text {
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+
+.reviews__empty {
+  color: var(--ink-soft);
+  margin-bottom: 28px;
+}
+
+.reviews__actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.reviews__btn svg { width: 18px; height: 18px; }
 
 /* ==========================================================================
    PROJECTS
@@ -731,7 +868,8 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
 
 .project-card--pathfinder .project-card__img { object-position: 50% 60%; }
 .project-card--carnival .project-card__img { object-position: 50% 75%; }
-.project-card--telluride .project-card__img { object-position: 50% 55%; }
+.project-card--vw-atlas .project-card__img { object-position: 50% 55%; }
+.project-card--gmc-acadia .project-card__img { object-position: 50% 60%; }
 .project-card--sedan-interior .project-card__img { object-position: 50% 60%; }
 .project-card--tahoe .project-card__img { object-position: 50% 62%; }
 .project-card--suburban .project-card__img { object-position: 50% 68%; }
@@ -1222,6 +1360,16 @@ html.is-modal-open { overflow: hidden; }
   margin-top: 26px;
 }
 
+.about__truck-photo {
+  display: block;
+  width: 100%;
+  max-width: 480px;
+  margin: 30px auto 0;
+  border-radius: 12px;
+  border: 1px solid var(--line-strong);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+}
+
 .about__facts li {
   position: relative;
   padding-left: 26px;
@@ -1302,6 +1450,13 @@ html.is-modal-open { overflow: hidden; }
   margin-bottom: 60px;
 }
 
+.contact__quick-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
 .contact__quick-note { color: var(--ink-soft); font-size: 0.95rem; text-align: center; }
 
 .contact__quick-icon {
@@ -1374,6 +1529,24 @@ html.is-modal-open { overflow: hidden; }
 .footer__logo span { color: var(--red); }
 
 .footer__tagline { color: var(--ink-soft); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.5px; }
+
+.footer__social { display: flex; gap: 14px; }
+
+.footer__social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  color: var(--ink-soft);
+  transition: color var(--transition), background var(--transition), transform var(--transition);
+}
+
+.footer__social a:hover { color: var(--white); background: var(--red); transform: translateY(-2px); }
+.footer__social svg { width: 18px; height: 18px; }
 
 .footer__phone a { color: var(--ink-soft); font-weight: 700; transition: color var(--transition); }
 .footer__phone a:hover { color: var(--red); }
@@ -1452,6 +1625,7 @@ html.is-modal-open { overflow: hidden; }
 
 @media (max-width: 760px) {
   .navbar__links { display: none; }
+  .navbar__social { display: none; }
 
   .navbar__toggle { display: flex; }
 
@@ -1469,6 +1643,8 @@ html.is-modal-open { overflow: hidden; }
     box-shadow: 0 16px 30px rgba(0,0,0,0.55);
   }
 
+  .navbar__inner { padding: 0 16px; gap: 14px; }
+  .navbar__logo-img { height: 34px; }
   .navbar__cta { padding: 9px 16px; font-size: 0.78rem; }
 
   .why-us__grid { grid-template-columns: 1fr; }
@@ -1486,6 +1662,10 @@ html.is-modal-open { overflow: hidden; }
   .contact__quick-btn { width: 100%; }
   .contact__location { padding: 26px 22px; }
   .about__facts { grid-template-columns: 1fr; }
+  .addons__note { flex-direction: column; padding: 16px 18px; }
+  .reviews__card { padding: 32px 22px; }
+  .reviews__btn { width: 100%; }
+  .review-item { flex-direction: column; }
 
   .mobile-text-fab { display: flex; }
 }
