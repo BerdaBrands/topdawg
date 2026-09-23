@@ -1477,7 +1477,7 @@ html.is-modal-open { overflow: hidden; }
 
 /* ---------- Booking (Square Appointments) ---------- */
 .booking {
-  max-width: 720px;
+  max-width: 1400px;
   margin: 0 auto 60px;
   text-align: center;
 }
@@ -1494,6 +1494,13 @@ html.is-modal-open { overflow: hidden; }
   border: 1px solid var(--line-strong);
   background: var(--card);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* When Square renders the inline calendar, size the iframe up (roughly
+   double its default) so it's not cramped. */
+.booking__widget iframe {
+  width: 100% !important;
+  min-height: 1000px !important;
 }
 
 /* Square's injected "Book Appointment Now" button (when it falls back to a
