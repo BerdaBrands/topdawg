@@ -1476,43 +1476,58 @@ html.is-modal-open { overflow: hidden; }
 }
 
 /* ---------- Booking (Square Appointments) ---------- */
-.booking {
-  max-width: 1400px;
-  margin: 0 auto 60px;
-  text-align: center;
+.booking-choices {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.booking-panel {
-  margin-top: 30px;
-}
-
-.booking__widget {
+.booking-choice {
   display: flex;
-  justify-content: center;
-  padding: 28px;
-  border-radius: 12px;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 44px 28px;
+  border-radius: 14px;
   border: 1px solid var(--line-strong);
   background: var(--card);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
 }
 
-/* When Square renders the inline calendar, size the iframe up (roughly
-   double its default) so it's not cramped. */
-.booking__widget iframe {
-  width: 100% !important;
-  min-height: 1000px !important;
+.booking-choice:hover {
+  transform: translateY(-4px);
+  border-color: var(--red);
+  box-shadow: 0 20px 50px rgba(204, 0, 0, 0.25);
 }
 
-/* Square's injected "Book Appointment Now" button (when it falls back to a
-   plain link instead of the inline calendar) sets a fixed height with no
-   wrapping allowance. On narrow screens that clips the label, so let it
-   size to its content instead. */
-.booking__widget a {
-  height: auto !important;
-  min-height: 40px;
-  white-space: normal !important;
+.booking-choice__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--red-text);
+}
+
+.booking-choice__icon svg { width: 30px; height: 30px; }
+
+.booking-choice__title {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--ink);
+}
+
+.booking-choice__desc {
+  color: var(--ink-soft);
+  font-size: 0.92rem;
   text-align: center;
-  max-width: 100%;
 }
 
 .book-page { min-height: calc(100vh - var(--header-height)); }
@@ -1524,6 +1539,10 @@ html.is-modal-open { overflow: hidden; }
 }
 
 .book-page__help a { color: var(--ink); font-weight: 700; text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .booking-choices { grid-template-columns: 1fr; }
+}
 .book-page__help a:hover { color: var(--red-text); }
 
 .contact__quick-note { color: var(--ink-soft); font-size: 0.95rem; text-align: center; }

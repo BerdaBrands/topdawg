@@ -28,29 +28,24 @@
 <section class="contact book-page" id="book">
   <div class="container">
     <h1 class="section-title">Book Your Appointment</h1>
-    <p class="section-subtitle">Pick how you want it done, then grab a time that works for you.</p>
+    <p class="section-subtitle">Choose the service that fits, then pick a time that works for you.</p>
 
-    <div class="booking">
-      <div class="toggle" role="group" aria-label="Booking location toggle">
-        <button type="button" class="toggle__btn is-active" data-mode="dropoff" id="bookToggleDropoff" aria-pressed="true" aria-controls="bookPanelDropoff">Shop Drop-Off</button>
-        <button type="button" class="toggle__btn" data-mode="mobile" id="bookToggleMobile" aria-pressed="false" aria-controls="bookPanelMobile">Mobile Detailing</button>
-      </div>
+    <div class="booking-choices">
+      <a href="https://app.squareup.com/appointments/buyer/widget/2qgx1xxr79e6xe/LZPG3J2BZD7VS" target="_blank" rel="noopener" class="booking-choice">
+        <span class="booking-choice__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </span>
+        <span class="booking-choice__title">Book a Shop Drop-Off</span>
+        <span class="booking-choice__desc">Bring your vehicle to our garage in Skiatook</span>
+      </a>
 
-      <div class="booking-panel" id="bookPanelDropoff">
-        <div class="booking__widget">
-          <!-- Start Square Appointments Embed Code -->
-          <script src='https://app.squareup.com/appointments/buyer/widget/2qgx1xxr79e6xe/LZPG3J2BZD7VS.js'></script>
-          <!-- End Square Appointments Embed Code -->
-        </div>
-      </div>
-
-      <div class="booking-panel" id="bookPanelMobile" hidden>
-        <div class="booking__widget">
-          <!-- Start Square Appointments Embed Code -->
-          <script src='https://app.squareup.com/appointments/buyer/widget/sz1cpcxoa248uw/LZPG3J2BZD7VS.js'></script>
-          <!-- End Square Appointments Embed Code -->
-        </div>
-      </div>
+      <a href="https://app.squareup.com/appointments/buyer/widget/sz1cpcxoa248uw/LZPG3J2BZD7VS" target="_blank" rel="noopener" class="booking-choice">
+        <span class="booking-choice__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+        </span>
+        <span class="booking-choice__title">Book a Mobile Detail</span>
+        <span class="booking-choice__desc">We come to you, within 20 miles of Skiatook</span>
+      </a>
     </div>
 
     <p class="book-page__help">Prefer to text instead? <a href="sms:9186971469">Text us at 918-697-1469</a>.</p>
