@@ -236,6 +236,13 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
 .navbar__social {
   display: flex;
   align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.navbar__social-btn {
+  display: flex;
+  align-items: center;
   justify-content: center;
   width: 36px;
   height: 36px;
@@ -247,8 +254,20 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
   transition: color var(--transition), background var(--transition), transform var(--transition);
 }
 
-.navbar__social:hover { color: var(--white); background: var(--red); transform: translateY(-2px); }
-.navbar__social svg { width: 17px; height: 17px; }
+.navbar__social-btn:hover { color: var(--white); background: var(--red); transform: translateY(-2px); }
+.navbar__social-btn svg { width: 17px; height: 17px; }
+
+.navbar__back {
+  margin-left: auto;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--ink-soft);
+  transition: color var(--transition);
+}
+
+.navbar__back:hover { color: var(--ink); }
 
 .navbar__toggle {
   display: none;
@@ -870,7 +889,6 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
 .project-card--carnival .project-card__img { object-position: 50% 75%; }
 .project-card--vw-atlas .project-card__img { object-position: 50% 55%; }
 .project-card--gmc-acadia .project-card__img { object-position: 50% 60%; }
-.project-card--sedan-interior .project-card__img { object-position: 50% 60%; }
 .project-card--tahoe .project-card__img { object-position: 50% 62%; }
 .project-card--suburban .project-card__img { object-position: 50% 68%; }
 .project-card--tahoe-lt .project-card__img { object-position: 50% 62%; }
@@ -1457,6 +1475,50 @@ html.is-modal-open { overflow: hidden; }
   gap: 14px;
 }
 
+/* ---------- Booking (Square Appointments) ---------- */
+.booking {
+  max-width: 720px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.booking-panel {
+  margin-top: 30px;
+}
+
+.booking__widget {
+  display: flex;
+  justify-content: center;
+  padding: 28px;
+  border-radius: 12px;
+  border: 1px solid var(--line-strong);
+  background: var(--card);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Square's injected "Book Appointment Now" button (when it falls back to a
+   plain link instead of the inline calendar) sets a fixed height with no
+   wrapping allowance. On narrow screens that clips the label, so let it
+   size to its content instead. */
+.booking__widget a {
+  height: auto !important;
+  min-height: 40px;
+  white-space: normal !important;
+  text-align: center;
+  max-width: 100%;
+}
+
+.book-page { min-height: calc(100vh - var(--header-height)); }
+
+.book-page__help {
+  margin-top: 40px;
+  text-align: center;
+  color: var(--ink-soft);
+}
+
+.book-page__help a { color: var(--ink); font-weight: 700; text-decoration: underline; }
+.book-page__help a:hover { color: var(--red-text); }
+
 .contact__quick-note { color: var(--ink-soft); font-size: 0.95rem; text-align: center; }
 
 .contact__quick-icon {
@@ -1646,6 +1708,7 @@ html.is-modal-open { overflow: hidden; }
   .navbar__inner { padding: 0 16px; gap: 14px; }
   .navbar__logo-img { height: 34px; }
   .navbar__cta { padding: 9px 16px; font-size: 0.78rem; }
+  .navbar__back { font-size: 0.72rem; }
 
   .why-us__grid { grid-template-columns: 1fr; }
 

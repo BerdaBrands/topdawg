@@ -39,26 +39,23 @@ document.addEventListener('DOMContentLoaded', () => {
     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 
-  /* ---------- Services / Pricing toggle (Shop Drop-Off vs Mobile) ---------- */
-  const toggleButtons = document.querySelectorAll('.toggle__btn');
-  const panels = {
-    dropoff: document.getElementById('panelDropoff'),
-    mobile: document.getElementById('panelMobile'),
-    addons: document.getElementById('panelAddons')
-  };
-
-  function setMode(mode) {
-    toggleButtons.forEach(btn => {
-      const active = btn.dataset.mode === mode;
-      btn.classList.toggle('is-active', active);
-      btn.setAttribute('aria-pressed', String(active));
+  /* ---------- Toggle groups (Services pricing, Booking location, etc.) ----------
+     Each .toggle group manages its own buttons/panels independently via
+     aria-controls, so any number of toggle groups can live on the page. */
+  document.querySelectorAll('.toggle').forEach(group => {
+    const buttons = group.querySelectorAll('.toggle__btn');
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => {
+          const active = b === btn;
+          b.classList.toggle('is-active', active);
+          b.setAttribute('aria-pressed', String(active));
+          const panel = document.getElementById(b.getAttribute('aria-controls'));
+          if (panel) panel.hidden = !active;
+        });
+      });
     });
-    Object.keys(panels).forEach(key => {
-      panels[key].hidden = key !== mode;
-    });
-  }
-
-  toggleButtons.forEach(btn => btn.addEventListener('click', () => setMode(btn.dataset.mode)));
+  });
 
   /* ---------- Before / After slider ---------- */
   const baSlider = document.getElementById('baSlider');
@@ -86,7 +83,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const prevBtn = document.getElementById('projectPrev');
   const nextBtn = document.getElementById('projectNext');
   const closeBtn = document.getElementById('projectClose');
-  const bookBtn = document.getElementById('projectBook');
   const kickerEl = document.getElementById('projectKicker');
   const titleEl = document.getElementById('projectTitle');
   const descEl = document.getElementById('projectDescription');
@@ -193,16 +189,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!(opts && opts.silent)) history.replaceState(null, '', '#project-' + activeId);
   }
 
-  let scrollToContact = false;
-
   function afterClose() {
     if (modal.open) return;
     document.documentElement.classList.remove('is-modal-open');
     if (location.hash.startsWith('#project-')) history.replaceState(null, '', '#projects');
-    if (scrollToContact) {
-      scrollToContact = false;
-      document.getElementById('contact').scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
   }
 
   function closeProject() {
@@ -247,13 +237,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   stage.addEventListener('pointercancel', () => { swipeStartX = null; });
 
-  // "Book This Service" closes the viewer and scrolls to the contact section
-  bookBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    scrollToContact = true;
-    closeProject();
-  });
-
   // Deep link: index.html#project-pathfinder opens that project
   const hashMatch = location.hash.match(/^#project-(.+)$/);
   if (hashMatch) {
@@ -269,7 +252,7 @@ document.addEventListener('DOMContentLoaded', () => {
     '.services .section-title, .services .toggle, .price-card, .travel-fee, .why-us__title, .why-us__item, .addons__note, ' +
     '.projects .section-title, .project-card, .before-after, ' +
     '.about__text, .about__card, .reviews__card, ' +
-    '.contact .section-title, .contact__quick-actions, .contact__location'
+    '.contact .section-title, .contact__quick-actions, .booking, .contact__location'
   );
 
   revealTargets.forEach(el => el.classList.add('reveal'));
