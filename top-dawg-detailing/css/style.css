@@ -1473,9 +1473,8 @@ html.is-modal-open { overflow: hidden; }
 .fleet {
   padding: 100px 0;
   background:
-    radial-gradient(ellipse 60% 38% at 0% 12%, rgba(204, 0, 0, 0.22), transparent 70%),
-    radial-gradient(ellipse 60% 38% at 100% 88%, rgba(204, 0, 0, 0.18), transparent 70%),
-    var(--bg-soft);
+    radial-gradient(ellipse 60% 38% at 100% 10%, rgba(204, 0, 0, 0.2), transparent 70%),
+    var(--bg);
 }
 
 .fleet__grid {
@@ -1521,76 +1520,34 @@ html.is-modal-open { overflow: hidden; }
   font-size: 0.95rem;
 }
 
-.fleet__form {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  padding: 34px;
+.fleet__contact {
+  padding: 38px 34px;
+  text-align: center;
   border-radius: 14px;
   border: 1px solid var(--line-strong);
   background: var(--card);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
 }
 
-.fleet__form-title {
+.fleet__contact-title {
   font-family: var(--font-display);
   font-weight: 400;
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  margin-bottom: 12px;
 }
 
-.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.fleet__contact > p { color: var(--ink-soft); margin-bottom: 26px; }
 
-.form-group { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
-
-.form-group label {
-  font-size: 0.78rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  color: var(--ink-soft);
+.fleet__contact-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 14px;
 }
 
-.form-group input,
-.form-group select,
-.form-group textarea {
-  width: 100%;
-  background: #14161b;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: var(--radius);
-  padding: 13px 16px;
-  color: var(--ink);
-  transition: border-color var(--transition), box-shadow var(--transition);
-}
-
-.form-group input::placeholder,
-.form-group textarea::placeholder { color: var(--ink-faint); }
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-  outline: none;
-  border-color: var(--red);
-  box-shadow: 0 0 0 3px rgba(204, 0, 0, 0.2);
-}
-
-.form-group select {
-  appearance: none;
-  -webkit-appearance: none;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23cc0000' stroke-width='3'><path d='M6 9l6 6 6-6'/></svg>");
-  background-repeat: no-repeat;
-  background-position: right 14px center;
-  background-size: 16px;
-  padding-right: 40px;
-}
-
-.form-group textarea { resize: vertical; min-height: 90px; }
-
-.fleet__submit { width: 100%; margin-top: 4px; }
-
-.fleet__note { color: var(--ink-faint); font-size: 0.85rem; text-align: center; }
-.fleet__note a { color: var(--ink); font-weight: 700; text-decoration: underline; }
+.fleet__note { margin-top: 20px; color: var(--ink-faint); font-size: 0.9rem; letter-spacing: 1px; }
 
 /* ==========================================================================
    CONTACT
@@ -1909,8 +1866,7 @@ html.is-modal-open { overflow: hidden; }
 
 @media (max-width: 760px) {
   .fleet { padding: 80px 0; }
-  .fleet__form { padding: 26px 20px; }
-  .form-row { grid-template-columns: 1fr; }
+  .fleet__contact { padding: 30px 22px; }
   .navbar__inner { padding: 0 16px; gap: 14px; }
   .navbar__logo-img { height: 34px; }
   .navbar__cta { padding: 9px 16px; font-size: 0.78rem; }

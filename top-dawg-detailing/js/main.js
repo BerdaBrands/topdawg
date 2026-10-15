@@ -252,7 +252,7 @@ document.addEventListener('DOMContentLoaded', () => {
     '.services .section-title, .services .toggle, .price-card, .travel-fee, .why-us__title, .why-us__item, .addons__note, ' +
     '.projects .section-title, .project-card, .before-after, ' +
     '.about__text, .about__card, .reviews__card, ' +
-    '.fleet .section-title, .fleet__info, .fleet__form, ' +
+    '.fleet .section-title, .fleet__info, .fleet__contact, ' +
     '.contact .section-title, .contact__quick-actions, .booking, .contact__location'
   );
 
@@ -275,27 +275,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
 
   revealTargets.forEach(el => revealObserver.observe(el));
-
-  /* ---------- Fleet quote form: opens a prefilled text message ---------- */
-  const fleetForm = document.getElementById('fleetForm');
-  if (fleetForm) {
-    const fleetStatus = document.getElementById('fleetStatus');
-    fleetForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const val = (id) => document.getElementById(id).value.trim();
-      const lines = [
-        'Fleet quote request',
-        'Name: ' + val('fleetName'),
-        'Business: ' + val('fleetBusiness'),
-        'Vehicles: ' + val('fleetCount'),
-        'Looking for: ' + val('fleetNeed')
-      ];
-      if (val('fleetTypes')) lines.push('Vehicle types: ' + val('fleetTypes'));
-      if (val('fleetNotes')) lines.push('Notes: ' + val('fleetNotes'));
-      fleetStatus.textContent = 'Opening your messages app. If nothing opens, text us at 918-697-1469 with those details.';
-      window.location.href = 'sms:9186971469?&body=' + encodeURIComponent(lines.join('\n'));
-    });
-  }
 
   /* ---------- Footer year ---------- */
   const yearEl = document.getElementById('year');
