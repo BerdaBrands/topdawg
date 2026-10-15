@@ -252,7 +252,7 @@ document.addEventListener('DOMContentLoaded', () => {
     '.services .section-title, .services .toggle, .price-card, .travel-fee, .why-us__title, .why-us__item, .addons__note, ' +
     '.projects .section-title, .project-card, .before-after, ' +
     '.about__text, .about__card, .reviews__card, ' +
-    '.fleet .section-title, .fleet__info, .fleet__contact, ' +
+    '.fleet .section-title, .fleet__body, ' +
     '.contact .section-title, .contact__quick-actions, .booking, .contact__location'
   );
 

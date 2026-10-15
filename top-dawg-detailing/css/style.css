@@ -1471,83 +1471,29 @@ html.is-modal-open { overflow: hidden; }
    ========================================================================== */
 
 .fleet {
-  padding: 100px 0;
+  padding: 70px 0;
   background:
-    radial-gradient(ellipse 60% 38% at 100% 10%, rgba(204, 0, 0, 0.2), transparent 70%),
+    radial-gradient(ellipse 60% 60% at 100% 10%, rgba(204, 0, 0, 0.2), transparent 70%),
     var(--bg);
 }
 
-.fleet__grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
-  gap: 48px;
-  align-items: start;
-}
-
-.fleet__points { display: flex; flex-direction: column; gap: 22px; }
-
-.fleet__points li { display: flex; gap: 16px; align-items: flex-start; }
-
-.fleet__icon {
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: var(--surface);
-  border: 1px solid var(--line-strong);
-  color: var(--red-text);
-}
-
-.fleet__icon svg { width: 22px; height: 22px; }
-
-.fleet__points h3 {
-  font-size: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-bottom: 4px;
-}
-
-.fleet__points p { color: var(--ink-soft); font-size: 0.93rem; }
-
-.fleet__who {
-  margin-top: 28px;
-  padding-top: 22px;
-  border-top: 1px solid var(--line);
-  color: var(--ink-soft);
-  font-size: 0.95rem;
-}
-
-.fleet__contact {
-  padding: 38px 34px;
+.fleet__body {
+  max-width: 720px;
+  margin: 28px auto 0;
   text-align: center;
-  border-radius: 14px;
-  border: 1px solid var(--line-strong);
-  background: var(--card);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
 }
 
-.fleet__contact-title {
-  font-family: var(--font-display);
-  font-weight: 400;
-  font-size: 1.7rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-bottom: 12px;
-}
-
-.fleet__contact > p { color: var(--ink-soft); margin-bottom: 26px; }
+.fleet__body > p:first-child { color: var(--ink-soft); font-size: 1.02rem; }
 
 .fleet__contact-buttons {
   display: flex;
-  flex-direction: column;
-  align-items: stretch;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 14px;
+  margin-top: 28px;
 }
 
-.fleet__note { margin-top: 20px; color: var(--ink-faint); font-size: 0.9rem; letter-spacing: 1px; }
+.fleet__note { margin-top: 18px; color: var(--ink-faint); font-size: 0.9rem; letter-spacing: 1px; }
 
 /* ==========================================================================
    CONTACT
@@ -1815,7 +1761,6 @@ html.is-modal-open { overflow: hidden; }
    ========================================================================== */
 
 @media (max-width: 900px) {
-  .fleet__grid { grid-template-columns: 1fr; gap: 36px; }
   .why-us__grid { grid-template-columns: repeat(2, 1fr); }
   .projects__grid { grid-template-columns: repeat(2, 1fr); }
   .project-card--feature { grid-column: span 2; }
@@ -1865,8 +1810,8 @@ html.is-modal-open { overflow: hidden; }
 }
 
 @media (max-width: 760px) {
-  .fleet { padding: 80px 0; }
-  .fleet__contact { padding: 30px 22px; }
+  .fleet { padding: 56px 0; }
+  .fleet__contact-buttons .btn { width: 100%; }
   .navbar__inner { padding: 0 16px; gap: 14px; }
   .navbar__logo-img { height: 34px; }
   .navbar__cta { padding: 9px 16px; font-size: 0.78rem; }
